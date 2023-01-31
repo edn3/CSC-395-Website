@@ -17,4 +17,5 @@ def test():
 
 # Main function
 if __name__ == '__main__':
-    app.run() # Flask function to run on local dev server
+    # app.run() # Flask function to run on local dev server
+    app.run(debug=False, host='0.0.0.0')
