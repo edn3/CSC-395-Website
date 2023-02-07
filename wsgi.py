@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, render_template
+from flask import Flask, redirect, url_for, render_template, send_from_directory
 app = Flask(__name__, static_folder='static', template_folder='templates')
 
 @app.route('/')
