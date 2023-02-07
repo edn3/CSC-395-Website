@@ -5,6 +5,7 @@ app = Flask(__name__, static_folder='static')
 def home():
     return render_template('home.html', title = "Home")
 
+"""
 @app.route('/about/')
 def about():
     return render_template('about.html', title = "About")
@@ -12,6 +13,7 @@ def about():
 @app.route('/test-page/')
 def test():
     return render_template('test-page.html') 
+"""
 
 @app.route('/static/<path:filename>')
 def custom_static(filename):
