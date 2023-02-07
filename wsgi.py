@@ -1,5 +1,5 @@
 from flask import Flask, redirect, url_for, render_template
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
 @app.route('/')
 def home():
@@ -12,6 +12,10 @@ def about():
 @app.route('/test-page/')
 def test():
     return render_template('test-page.html') 
+
+@app.route('/static/<path:filename>')
+def custom_static(filename):
+    return send_from_directory(app.static_folder, filename)
     
 #return app.send_static_file('serviceWorker.js')
 
